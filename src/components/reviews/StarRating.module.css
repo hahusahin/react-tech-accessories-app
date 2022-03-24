@@ -1,0 +1,10 @@
+.stars button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.stars span {
+  color: #caca00;
+}

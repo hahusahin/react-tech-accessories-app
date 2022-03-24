@@ -1,0 +1,18 @@
+.selector {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+}
+
+.selector button {
+  color:#ff3300;
+  padding: .25rem;
+  border-radius: 0;
+}
+
+.selector input {
+  text-align: center;
+  width: 2.5rem;
+  padding: .25rem;
+  font-size: 1rem;
+}

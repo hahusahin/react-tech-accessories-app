@@ -1,0 +1,21 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid white;
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+
+.stars{
+  font-size: x-large;
+  color:#fdff80
+}
+
+.name {
+  text-align: end;
+  font-style: italic;
+}
+
+
