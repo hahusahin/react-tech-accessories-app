@@ -1,6 +1,9 @@
-# React Simple E-commerce App
+# React Simple Shopping App
 
- * <h2> https://react-tech-accessories-app.vercel.app/ </h2>
+## Web Link
+<h3> https://react-tech-accessories-app.vercel.app/ </h3>
+
+## About This Project
  * In this project, I've tried to crate a simple e-commerce website with React.
  * You can click on a product to see the product details
  * You can make a search on all products
