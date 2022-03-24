@@ -22,3 +22,4 @@
  * Router (react-router-dom v6)
  * Bootstrap 5
  * Axios
+ * Firebase (Realtime Database)
