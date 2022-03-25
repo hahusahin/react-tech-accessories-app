@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialUIState = { isModalShown: false };
+const initialUIState = { isModalShown: false, isToastShown: false, toastBody: "" };
 
 const uiSlice = createSlice({
   name: "ui",
@@ -11,6 +11,14 @@ const uiSlice = createSlice({
     },
     hideModal(state){
       state.isModalShown = false
+    },
+    showToast(state, action){
+      state.isToastShown = true
+      state.toastBody = action.payload
+    },
+    hideToast(state){
+      state.isToastShown = false
+      state.toastBody = ""
     }
   },
 });

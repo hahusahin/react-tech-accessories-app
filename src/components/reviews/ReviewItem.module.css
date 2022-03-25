@@ -3,7 +3,8 @@
   flex-direction: column;
   border: 0.1rem solid white;
   border-radius: 0.5rem;
-  margin: 1rem 0;
+  max-width: 50rem;
+  margin: 1rem auto;
   gap: 0.5rem;
   padding: 1rem;
 }

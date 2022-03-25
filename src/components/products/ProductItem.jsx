@@ -2,16 +2,18 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { cartActions } from "../../store/cart-slice";
+import { uiActions } from "../../store/ui-slice";
 import styles from "./ProductItem.module.css";
 
 const ProductItem = (props) => {
-  const { id, name, imageUrl, price } = props.item
+  const { id, name, imageUrl, price } = props.item;
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   const addToCartHandler = () => {
-    dispatch(cartActions.addItem(props.item))
-  }
+    dispatch(cartActions.addItem(props.item));
+    dispatch(uiActions.showToast(name));
+  };
 
   return (
     <div className="col text-center">
@@ -23,7 +25,12 @@ const ProductItem = (props) => {
             <p className="card-text">{`$ ${price}`}</p>
           </div>
         </Link>
-        <button className="btn btn-primary mt-auto mx-auto px-4" onClick={addToCartHandler}>Add to Cart</button>
+        <button
+          className="btn btn-primary mt-auto mx-auto px-4"
+          onClick={addToCartHandler}
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
   );

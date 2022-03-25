@@ -1,22 +1,28 @@
 import React, { Fragment } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
+import { uiActions } from "../../store/ui-slice";
+import Popup from "../ui/Popup";
 
 const ProductDetail = (props) => {
   const dispatch = useDispatch();
+  const isToastShown = useSelector(state => state.ui.isToastShown)
+  const toastBody = useSelector(state => state.ui.toastBody)
 
   const { productDetails } = props;
 
   const addToCartHandler = () => {
     dispatch(cartActions.addItem(productDetails));
+    dispatch(uiActions.showToast(productDetails.name));
   };
 
   return (
     <Fragment>
+      <Popup show={isToastShown} header="Added to your cart" body={toastBody}/>
       <h1 className="text-center my-4">Product Details</h1>
-      <section className="my-4 border border-white rounded">
+      <section className="my-4">
         <div className="row p-4 g-4">
-          <div className="col-md-4 p-3 d-flex align-items-center border border-white rounded">
+          <div className="col-md-4 p-3 d-flex align-items-center">
             <img className="w-100" src={productDetails.imageUrl} alt="..." style={{maxHeight:"75vh"}}/>
           </div>
           <div className="col-md-8 d-flex flex-column gap-2">
