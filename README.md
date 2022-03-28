@@ -13,9 +13,9 @@
  * You can place order in which a validation is made to fill the form
  * Added Authentication (you can sign up, login and can make review only if you are logged in
 
-![screenshot1](https://user-images.githubusercontent.com/50502928/159922005-075ec72e-2db8-42eb-997f-73fb20bf975c.png)
-![screenshot2](https://user-images.githubusercontent.com/50502928/159922011-a071f9df-1fe8-492e-8ff3-2078465cb851.png)
-![screenshot3](https://user-images.githubusercontent.com/50502928/159922014-dfd688b7-2b5f-48a5-aa03-5cf996f1ff3b.png)
+![screenshot1](https://user-images.githubusercontent.com/50502928/160470961-4a470b45-ed76-4f99-9a0a-dc4aa8ef6e6d.png)
+![screenshot2](https://user-images.githubusercontent.com/50502928/160470964-53ecbf65-706c-4414-b12b-2738e6e6e16d.png)
+![screenshot3](https://user-images.githubusercontent.com/50502928/160470965-d00e5959-e7e1-4039-94e5-8c8bff55e487.png)
 ![screenshot4](https://user-images.githubusercontent.com/50502928/159922015-dcf13087-659c-48db-9dd5-4cd78a287433.png)
 ![screenshot5](https://user-images.githubusercontent.com/50502928/159922017-ca3be5a8-4f23-4b35-87e6-d518add97163.png)
 
