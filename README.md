@@ -1,16 +1,17 @@
 # React Simple Shopping App
 
 ## Web Link
-<h3> https://react-tech-accessories-app.vercel.app/ </h3>
+<h3> https://react-redux-products-5b75d.web.app/ </h3>
 
 ## About This Project
  * In this project, I've tried to crate a simple e-commerce website with React.
  * You can click on a product to see the product details
  * You can make a search on all products
- * You can see all reviews made for the product as well as you can make a new review 
+ * You can see all reviews made for the product as well as you can make a new review
  * You can add the product to your shopping cart any time
  * You can increment / decrement quantity of a product in your shopping cart
  * You can place order in which a validation is made to fill the form
+ * Added Authentication (you can sign up, login and can make review only if you are logged in
 
 ![screenshot1](https://user-images.githubusercontent.com/50502928/159922005-075ec72e-2db8-42eb-997f-73fb20bf975c.png)
 ![screenshot2](https://user-images.githubusercontent.com/50502928/159922011-a071f9df-1fe8-492e-8ff3-2078465cb851.png)
@@ -25,4 +26,4 @@
  * Router (react-router-dom v6)
  * Bootstrap 5
  * Axios
- * Firebase (Realtime Database)
+ * Firebase Realtime Database, Firebase Authentication, Firebase Hosting
