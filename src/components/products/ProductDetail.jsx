@@ -18,7 +18,7 @@ const ProductDetail = (props) => {
 
   return (
     <Fragment>
-      <Popup show={isToastShown} header="Added to your cart" body={toastBody}/>
+      {isToastShown && <Popup header="Added to your cart" body={toastBody}/>}
       <h1 className="text-center my-4">Product Details</h1>
       <section className="my-4">
         <div className="row p-4 g-4">

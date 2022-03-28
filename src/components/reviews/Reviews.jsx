@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import ReviewForm from "./ReviewForm";
 import ReviewItem from "./ReviewItem";
 
 const Reviews = (props) => {
   const [showForm, setShowForm] = useState(false);
+  const [showWarning, setShowWarning] = useState(false);
+  const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
 
   const { loadedReviews } = props;
 
@@ -12,6 +16,14 @@ const Reviews = (props) => {
     currentRating: props.rating,
     numOfReviews: loadedReviews.length,
   };
+
+  const showFormHandler = () => {
+    if(isLoggedIn){
+      setShowForm(true)
+    } else {
+      setShowWarning(true)
+    }
+  }
 
   return (
     <section className="my-5">
@@ -25,14 +37,20 @@ const Reviews = (props) => {
           <h5 className="text-center my-4">No Reviews Yet</h5>
         )}
       </div>
-      {!showForm && (
+      {!showForm && !showWarning && (
         <div className="text-center">
           <button
             className="btn btn-success px-3"
-            onClick={() => setShowForm(true)}
+            onClick={showFormHandler}
           >
             Review Product
           </button>
+        </div>
+      )}
+      {showWarning && (
+        <div className="text-center">
+          <p>You should be logged in to make a review.</p>
+          <Link to="/login" className="btn btn-danger">Login</Link>
         </div>
       )}
       {showForm && (
