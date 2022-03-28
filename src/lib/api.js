@@ -43,3 +43,28 @@ export const sendReviewAndUpdateRating = async (data) => {
 
   return null
 }
+
+export const sendSignUpCredentials = async (userData) => {
+  const restEndPoint = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${process.env.REACT_APP_FIREBASE_API_KEY}`
+  const authResponse = await axios.post(restEndPoint, userData.credentials)
+  const data = authResponse.data
+  if(data && data.localId){
+    await axios.put(`${BASE_URL}/users/${data.localId}.json`, userData.userInfo)
+    return {userId: data.localId, token: data.idToken}
+  } else {
+    return null
+  }
+}
+
+export const sendLoginCredentials = async (credentials) => {
+  const restEndPoint = `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.REACT_APP_FIREBASE_API_KEY}`
+  const response = await axios.post(restEndPoint, credentials)
+  const data = response.data
+  return {userId: data.localId, token: data.idToken}  
+}
+
+export const getUserDetails = async (userId) => {
+  const response = await axios.get(`${BASE_URL}/users/${userId}.json`)
+  const data = response.data
+  return data
+}
